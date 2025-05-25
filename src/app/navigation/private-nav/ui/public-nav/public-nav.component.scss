@@ -1,0 +1,38 @@
+@use '@angular/material' as mat;
+@media (min-width: 768px) {
+    .submenu>*+* {
+        margin-left: 0.5rem;
+    }
+}
+p {
+  font-family: Lato;
+}
+.title-card {
+    background-color: rgb(96, 150, 180);
+    align-items: center;
+    justify-items: center;
+
+    mat-card-title {
+        color: white;
+        margin: 0 0 10px 0;
+    }
+}
+
+.menu {
+    border-radius: 0;
+    background-color: rgb(189, 205, 214);
+
+    .submenu {
+        display: flex;
+        gap: 0.5em;
+    }
+    align-items: center;
+
+    .logo {
+        width: 2em;
+
+        img {
+            width: 100%;
+        }
+    }
+}

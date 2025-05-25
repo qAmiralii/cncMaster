@@ -1,3 +1,26 @@
-<mat-card-header>
-    
-</mat-card-header>
+<mat-card class="title-card" appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>
+            CNC MASTER
+        </mat-card-title>
+    </mat-card-header>
+</mat-card>
+<mat-card class="menu" appearance="outlined">
+    <mat-card-content>
+        <div class="submenu">
+            <div class="container">
+                <div class="logo">
+                    <img src="/favicon.ico" alt="logo">
+                </div>
+            </div>
+            <div class="container">
+                <input type="text"  placeholder="Search...">
+                <ul>
+                    <li *ngFor="let item of items | appFilter: searchText">
+                        {{ item.name }} - {{ item.description }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
