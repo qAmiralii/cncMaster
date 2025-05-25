@@ -14,13 +14,51 @@
                 </div>
             </div>
             <div class="container">
-                <input type="text"  placeholder="Search...">
-                <ul>
-                    <li *ngFor="let item of items | appFilter: searchText">
-                        {{ item.name }} - {{ item.description }}
-                    </li>
-                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="search..." />
+                    <button>
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M21 21L15.8 15.8M17 10A7 7 0 1 0 3 10a7 7 0 0 0 14 0Z" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
             </div>
+            <div class="container">
+                <div class="basket">    
+                    <a class="cart-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                        <span>cart</span>
+                    </a>
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="buttons">
+                    <button mat-button>Basic</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="buttons">
+                    <button mat-button>Basic</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="buttons">
+                    <button mat-button>Basic</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="buttons">
+                    <button mat-button>Basic</button>
+                </div>
+            </div>
+
         </div>
     </mat-card-content>
 </mat-card>
