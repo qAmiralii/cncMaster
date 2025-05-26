@@ -1,7 +1,11 @@
-.main{
+.main {
     background-image: url("/img/wp4511436.jpg");
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 mat-checkbox {
     margin: 0 2em;
 }
@@ -46,6 +50,3 @@ mat-form-field {
     text-align: center;
     margin-bottom: 1em;
 }
-
-
-
