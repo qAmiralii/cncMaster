@@ -1,0 +1,51 @@
+.main{
+    background-image: url("/img/wp4511436.jpg");
+    height: 100%;
+}
+mat-checkbox {
+    margin: 0 2em;
+}
+
+h2 {
+    text-align: center;
+}
+
+mat-card {
+    background-color: rgba(255, 255, 255, 0.823);
+}
+
+mat-card {
+    width: 30%;
+
+    .button {
+        margin-bottom: 0.5em;
+
+        button {
+            width: 85%;
+        }
+
+        text-align: center;
+    }
+}
+
+.mobile {
+    width: 90%;
+}
+
+mat-form-field {
+    width: 80%;
+
+}
+
+.input,
+.forget {
+    text-align: center;
+}
+
+.forget {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+
+
