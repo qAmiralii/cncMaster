@@ -45,6 +45,7 @@ export class LoginComponent {
     password: '',
     keepMe: false
   }
+  onLogin = true;
   isValid() {
     if (this.Login.username.trim() == '' || this.Login.password == '') {
       return true;
