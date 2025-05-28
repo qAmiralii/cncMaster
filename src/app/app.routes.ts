@@ -1,10 +1,13 @@
 import { Routes } from '@angular/router';
-import { PublicNavComponent } from './navigation/private-nav/ui/public-nav/public-nav.component';
 import { LoginComponent } from './pages/public/login/ui/login.component';
+import { PublicNavComponent } from './navigation/public-nav/ui/public-nav.component';
+import { HomeComponent } from './pages/public/home/ui/home.component';
 
 export const routes: Routes = [
     {
         path: 'public', component: PublicNavComponent, children: [
+            {path: 'home', component: HomeComponent, pathMatch: 'prefix'},
+            {path: '', redirectTo: 'home', pathMatch: 'prefix'}
 
         ]
     },

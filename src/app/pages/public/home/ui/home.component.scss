@@ -1,0 +1,128 @@
+.top-card {
+    border: 0;
+
+
+    mat-card-title-group {
+        margin-top: 3%;
+    }
+
+    mat-card-title {
+        font-size: xx-large;
+        color: rgb(220, 164, 52);
+    }
+
+    mat-card-subtitle {
+        font-size: x-large;
+        color: gray;
+        font-weight: 400;
+        margin-top: 0.5em;
+    }
+
+    .landimg {
+        .limg{
+            width: 100%;
+        }
+        margin: 0 3rem 0 0;
+        width: 45vw;
+    }
+}
+
+
+@keyframes slider {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(0);
+    }
+
+    30% {
+        transform: translateX(-70%);
+    }
+
+    50% {
+        transform: translateX(-70%);
+    }
+
+    55% {
+        transform: translateX(-140%);
+    }
+
+    75% {
+        transform: translateX(-140%);
+    }
+
+    80% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+.slider {
+    display: inline-block;
+    margin: 0 5em 0 0;
+
+    .container {
+        width: 23vw;
+        overflow: hidden;
+        height: 45vh;
+        position: relative;
+        border-radius: 1em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+}
+
+.wrapper {
+    animation: slider 16s infinite;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    width: 37vw;
+
+    img {
+        width: 100%;
+    }
+}
+
+.cnc-intro {
+  background-color: #f5faff;
+  border: 1px solid #cce5ff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #003366;
+
+  h3 {
+    color: #0077cc;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+#sp{
+
+    margin-top: 10em !important; //???????????????????????????????????????????????????????????
+}
+  .btn-blue {
+    background-color: #0077cc;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #005fa3;
+    }
+  }
+}
