@@ -17,22 +17,14 @@ export class SliderComponent {
 
   ];
   currentSlide = 0;
-  intervalId: any;
-
-  ngOnInit(): void {
-    this.startAutoSlide();
-  }
-
-  ngOnDestroy(): void {
-    clearInterval(this.intervalId);
-  }
+  broBadi: any;
 
   startAutoSlide(): void {
-    this.intervalId = setInterval(() => {
+    this.broBadi = setInterval(() => {
       this.nextSlide();
-    }, 5000);
+    }, 6000);
   }
-
+  
   nextSlide(): void {
     this.currentSlide = (this.currentSlide + 1) % this.images.length;
   }
@@ -40,6 +32,14 @@ export class SliderComponent {
   prevSlide(): void {
     this.currentSlide =
       (this.currentSlide - 1 + this.images.length) % this.images.length;
+  }
+
+
+  ngOnDestroy(): void {
+    clearInterval(this.broBadi);
+  }
+  ngOnInit(): void {
+    this.startAutoSlide();
   }
 }
 

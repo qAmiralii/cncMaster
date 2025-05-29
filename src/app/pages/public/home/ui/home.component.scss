@@ -1,3 +1,5 @@
+@use '@angular/material' as mat;
+
 .top-card {
     border: 0;
 
@@ -19,106 +21,60 @@
     }
 
     .landimg {
-        .limg{
+        .limg {
             width: 100%;
         }
+
         margin: 0 3rem 0 0;
         width: 45vw;
     }
 }
 
+.badge {
+    margin-top: 10rem;
+    color: black;
+    @include mat.icon-overrides((color: green,
+        ));
 
-@keyframes slider {
-    0% {
-        transform: translateX(0);
-    }
-
-    25% {
-        transform: translateX(0);
-    }
-
-    30% {
-        transform: translateX(-70%);
-    }
-
-    50% {
-        transform: translateX(-70%);
-    }
-
-    55% {
-        transform: translateX(-140%);
-    }
-
-    75% {
-        transform: translateX(-140%);
-    }
-
-    80% {
-        transform: translateX(-200%);
-    }
-
-    100% {
-        transform: translateX(-200%);
+    mat-icon {
+        font-size: 32px;
+        width: 10%;
     }
 }
-.slider {
-    display: inline-block;
-    margin: 0 5em 0 0;
-
-    .container {
-        width: 23vw;
-        overflow: hidden;
-        height: 45vh;
-        position: relative;
-        border-radius: 1em;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-}
-.wrapper {
-    animation: slider 16s infinite;
-    display: flex;
-    height: 100%;
-    flex-direction: row;
-    width: 37vw;
-
-    img {
-        width: 100%;
-    }
-}
-
 
 
 .cnc-intro {
-  background-color: #f5faff;
-  border: 1px solid #cce5ff;
-  padding: 1.5rem;
-  margin: 1.5rem;
-  border-radius: 12px;
-  text-align: center;
-  color: #003366;
-
-  h2 {
-    color: #0077cc;
-    margin-bottom: 0.5rem;
-  }
-
-  p{
+    background-color: #f5faff;
+    border: 1px solid #cce5ff;
+    padding: 1.5rem;
     margin: 1.5rem;
-    line-height: 1.7;
-  }
+    border-radius: 12px;
+    text-align: center;
+    color: #003366;
 
-  .btn-blue {
-    background-color: #0077cc;
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    cursor: pointer;
-    margin: 10rem 0 0 0;
-    &:hover {
-      background-color: #005fa3;
+    h2 {
+        color: #0077cc;
+        margin-bottom: 0.5rem;
     }
-  }
+
+    p {
+        margin: 1.5rem;
+        line-height: 1.7;
+    }
+
+    .btn-blue {
+        background-color: #0077cc;
+        color: white;
+        padding: 0.6rem 1.2rem;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        cursor: pointer;
+        margin: 10rem 0 0 0;
+
+        &:hover {
+            background-color: #005fa3;
+        }
+    }
 }
