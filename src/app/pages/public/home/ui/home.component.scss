@@ -38,10 +38,17 @@
 
     mat-icon {
         font-size: 32px;
-        width: 10%;
+        width: 100%;
         cursor: pointer;
-
-
+    }
+    button{
+        border: 0;
+        background-color: rgba(47, 32, 13, 0);
+        padding: 0;
+    }
+    .disable{
+            @include mat.icon-overrides((color: rgba(0, 128, 0, 0.523),
+        ));
     }
 }
 

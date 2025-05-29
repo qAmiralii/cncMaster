@@ -12,8 +12,9 @@
         for all CNC models
         <div class="badge">
           Real trust, not fake numbers
-          <mat-icon (click)="plus()" [matBadge]="counter"> done_outline</mat-icon>
-          <br>
+          <button (click)="plus()" (click)="openSnackBar()" [disabled]="disable" [class.disable]="disable">
+            <mat-icon  [matBadge]="counter"> done_outline</mat-icon>
+          </button>
 
 
 
