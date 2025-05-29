@@ -61,7 +61,6 @@
         transform: translateX(-200%);
     }
 }
-
 .slider {
     display: inline-block;
     margin: 0 5em 0 0;
@@ -73,10 +72,8 @@
         position: relative;
         border-radius: 1em;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
     }
 }
-
 .wrapper {
     animation: slider 16s infinite;
     display: flex;
@@ -89,28 +86,27 @@
     }
 }
 
+
+
 .cnc-intro {
   background-color: #f5faff;
   border: 1px solid #cce5ff;
   padding: 1.5rem;
+  margin: 1.5rem;
   border-radius: 12px;
   text-align: center;
   color: #003366;
 
-  h3 {
+  h2 {
     color: #0077cc;
     margin-bottom: 0.5rem;
   }
 
-  p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+  p{
+    margin: 1.5rem;
     line-height: 1.7;
   }
-#sp{
 
-    margin-top: 10em !important; //???????????????????????????????????????????????????????????
-}
   .btn-blue {
     background-color: #0077cc;
     color: white;
@@ -120,7 +116,7 @@
     text-decoration: none;
     font-weight: 500;
     cursor: pointer;
-
+    margin: 10rem 0 0 0;
     &:hover {
       background-color: #005fa3;
     }
