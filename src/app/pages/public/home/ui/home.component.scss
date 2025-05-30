@@ -41,14 +41,16 @@
         width: 100%;
         cursor: pointer;
     }
-    button{
+
+    button {
         border: 0;
         background-color: rgba(47, 32, 13, 0);
         padding: 0;
     }
-    .disable{
-            @include mat.icon-overrides((color: rgba(0, 128, 0, 0.523),
-        ));
+
+    .disable {
+        @include mat.icon-overrides((color: rgba(0, 128, 0, 0.523),
+            ));
     }
 }
 
@@ -87,4 +89,59 @@
             background-color: #005fa3;
         }
     }
+}
+
+.example-pizza-party {
+    color: green;
+    @include mat.snack-bar-overrides((button-color: orange,
+            container-color: red,
+            supporting-text-color:red));
+
+    mat-snack-bar-container {
+        background-color: #ffffff;
+    }
+
+    .mdc-snackbar__surface {
+        background-color: #ffffff;
+
+    }
+
+}
+
+::ng-deep .mat-mdc-snack-bar-container .mat-mdc-snackbar-surface {
+    background-color: white !important;
+    color: black !important;
+}
+
+.line {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.example-card {
+    max-width: 400px;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+
+
+.middle-models{
+display: flex;
+justify-content: center;
+gap: 4rem;
+
+
+
+
+
+
+
+
+
+
 }
