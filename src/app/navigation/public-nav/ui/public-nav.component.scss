@@ -190,15 +190,12 @@ p {
 
 
 
-// مخفی کردن در موبایل
 .mobile .hide-on-mobile {
     display: none !important;
 }
 
-// فقط نمایش در موبایل
 .show-on-mobile {
     display: none;
-    
 }
 
 .mobile .show-on-mobile {
@@ -206,10 +203,9 @@ p {
     align-items: center;
 }
 
-// منوی موبایل بازشونده
 .mobile-menu {
     margin-top: 1rem;
-    border-radius: 8px !important;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     padding: 1rem;
