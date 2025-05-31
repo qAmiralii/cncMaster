@@ -22,7 +22,7 @@ export class SliderComponent {
   startAutoSlide(): void {
     this.broBadi = setInterval(() => {
       this.nextSlide();
-    }, 6000);
+    }, 5000);
   }
   
   nextSlide(): void {

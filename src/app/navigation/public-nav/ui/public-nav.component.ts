@@ -1,7 +1,11 @@
-import { Component } from '@angular/core';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
+import { Component, inject } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { map, Observable, shareReplay } from 'rxjs';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { AsyncPipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-public-nav',
@@ -9,7 +13,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
     MatCardModule,
     MatButtonModule,
     RouterLink,
-    RouterOutlet
+    RouterOutlet,
+    AsyncPipe,
 
   ],
   templateUrl: './public-nav.component.html',
@@ -17,4 +22,18 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class PublicNavComponent {
 
+  private breakpointObserver = inject(BreakpointObserver);
+
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
+
+  showMobileMenu = false;
+
+  toggleMobileMenu() {
+    this.showMobileMenu = !this.showMobileMenu;
+  }
 }
+

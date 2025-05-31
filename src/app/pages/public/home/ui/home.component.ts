@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { SliderComponent } from "../../../../components/slider/slider.component";
+import { SliderComponent } from "../../../../components/slider/ui/slider.component";
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { IshandedComponent } from "../../../../components/test/ui/ishanded/ishanded.component";
 
 
 
@@ -17,7 +18,8 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     MatCardModule,
     SliderComponent,
     MatSnackBarModule,
-  ],
+    IshandedComponent
+],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -37,7 +39,7 @@ export class HomeComponent {
 
   openSnackBar() {
     this._snackBar.openFromComponent(PizzaPartyComponent, {
-      duration: this.durationInSeconds * 9000,
+      duration: this.durationInSeconds * 800,
     });
   }
 

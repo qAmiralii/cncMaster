@@ -5,7 +5,9 @@
         </mat-card-title>
     </mat-card-header>
 </mat-card>
-<mat-card class="menu" appearance="outlined">
+
+
+<mat-card class="menu" [class.mobile]="(isHandset$ | async)" appearance="outlined">
     <mat-card-content>
         <div class="submenu">
             <div class="container">
@@ -13,7 +15,8 @@
                     <img src="/favicon.ico" alt="logo">
                 </div>
             </div>
-            <div class="container">
+
+            <div class="container hide-on-mobile">
                 <div class="search-box">
                     <input type="text" placeholder="search..." />
                     <button>
@@ -24,56 +27,99 @@
                     </button>
                 </div>
             </div>
-            <div class="container">
-                <div class="basket">
-                    <a class="cart-link">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="9" cy="21" r="1" />
-                            <circle cx="20" cy="21" r="1" />
-                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
-                        </svg>
-                        <span>cart</span>
-                    </a>
 
-                </div>
+            <!-- آیکون موبایل منو -->
+            <div class="container show-on-mobile">
+                <button class="menu-toggle" (click)="toggleMobileMenu()">
+                    ☰
+                </button>
             </div>
-            <div class="container">
-                <div class="buttons">
+
+            <!-- منوی کامل فقط در دسکتاپ -->
+            <div class="container" id="sp">
+                <div class="buttons hide-on-mobile">
                     <button mat-button>Home</button>
                 </div>
-            </div>
-            <div class="container">
-                <div class="buttons">
+                <div class="buttons hide-on-mobile">
                     <button mat-button>Products</button>
                 </div>
-            </div>
-            <div class="container">
-                <div class="buttons">
+                <div class="buttons hide-on-mobile">
                     <button mat-button>News</button>
                 </div>
-            </div>
-            <div class="container">
-                <div class="buttons">
+                <div class="buttons hide-on-mobile">
                     <button mat-button>Support</button>
                 </div>
-            </div>
-            <div class="container">
-                <div class="buttons">
+                <div class="buttons hide-on-mobile">
                     <button mat-button>About us</button>
                 </div>
             </div>
-            <div routerLink="/login" class="container">
-                <div class="buttons">
-                    <div  class="auth-buttons">
-                        <button class="btn login">Login</button>
-                        <button class="btn signup">sign up</button>
-                    </div>
+        </div>
+
+        <div routerLink="/login" class="container">
+            <div class="buttons">
+                <div class="auth-buttons">
+                    <button class="btn login">Login</button>
+                    <button class="btn signup">sign up</button>
                 </div>
             </div>
-            
-            
         </div>
+        @if (showMobileMenu) {
+        <div class="mobile-menu">
+            <button mat-button>Products</button>
+            <button mat-button>News</button>
+            <button mat-button>Support</button>
+            <button mat-button>About us</button>
+        </div>
+        }
     </mat-card-content>
 </mat-card>
+
+<!-- <div routerLink="/login" class="container hide-on-mobile">
+    <div class="buttons">
+        <div class="auth-buttons">
+            <button class="btn login">Login</button>
+            <button class="btn signup">Sign up</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="basket">
+        <a class="cart-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+            </svg>
+            <span>cart</span>
+        </a>
+
+    </div>
+</div>
+<div class="container">
+    <div class="buttons">
+        <button mat-button>Home</button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="buttons">
+        <button mat-button>News</button>
+    </div>
+</div>
+<div class="container">
+    <div class="buttons">
+        <button mat-button>Support</button>
+    </div>
+</div>
+<div class="container">
+    <div class="buttons">
+        <button mat-button>About us</button>
+    </div>
+</div>
+
+</mat-card-content>
+</mat-card> -->
 <router-outlet></router-outlet>
