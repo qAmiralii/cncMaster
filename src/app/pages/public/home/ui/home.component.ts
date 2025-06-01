@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { IshandedComponent } from "../../../../components/test/ui/ishanded/ishanded.component";
+import { FooterComponent } from "../../../../components/footer/ui/footer/footer.component";
 
 
 
@@ -18,7 +19,8 @@ import { IshandedComponent } from "../../../../components/test/ui/ishanded/ishan
     MatCardModule,
     SliderComponent,
     MatSnackBarModule,
-    IshandedComponent
+    IshandedComponent,
+    FooterComponent
 ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './home.component.html',
