@@ -39,9 +39,9 @@
   <hr>
 </div>
 
-<div class="middle-models">
+<div class="middle-models" [class.scrollable]="(isHandset$ | async)">
 
-  <mat-card class="example-card" appearance="outlined">
+  <mat-card class="middle-card" appearance="outlined">
     <img mat-card-image src="/img/s3.png" alt="Photo of a Shiba Inu">
     <mat-card-content>
       <p>
@@ -57,7 +57,7 @@
 
 
 
-  <mat-card class="example-card" appearance="outlined">
+  <mat-card class="middle-card" appearance="outlined">
     <img mat-card-image src="/img/cncrouter/107.jpg" alt="Photo of a Shiba Inu">
     <mat-card-content>
       <p>
@@ -73,7 +73,7 @@
 
 
 
-  <mat-card class="example-card" appearance="outlined">
+  <mat-card class="middle-card" appearance="outlined">
     <img mat-card-image src="/img/s2.png" alt="Photo of a Shiba Inu">
     <mat-card-content>
       <p>

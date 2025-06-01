@@ -6,7 +6,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { IshandedComponent } from "../../../../components/test/ui/ishanded/ishanded.component";
-import { FooterComponent } from "../../../../components/footer/ui/footer/footer.component";
+import { FooterComponent } from "../../../../components/footer/ui/footer.component";
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable, map, shareReplay } from 'rxjs';
+import { AsyncPipe } from '@angular/common';
 
 
 
@@ -20,8 +23,9 @@ import { FooterComponent } from "../../../../components/footer/ui/footer/footer.
     SliderComponent,
     MatSnackBarModule,
     IshandedComponent,
-    FooterComponent
-],
+    FooterComponent,
+    AsyncPipe
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -34,7 +38,13 @@ export class HomeComponent {
     this.disable = true
   }
 
+  private breakpointObserver = inject(BreakpointObserver);
 
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
 
   durationInSeconds = 5;
   private _snackBar = inject(MatSnackBar);
