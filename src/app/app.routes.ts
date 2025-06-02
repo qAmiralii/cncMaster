@@ -10,7 +10,7 @@ export const routes: Routes = [
         path: 'public', component: PublicNavComponent, children: [
             {path: 'home', component: HomeComponent, pathMatch: 'prefix'},
             {path: '', redirectTo: 'home', pathMatch: 'prefix'},
-            {path: 'products', component: ProductListComponent, pathMatch:'full'}
+            {path: 'products', component: ProductCardComponent, pathMatch:'full'}
 
         ]
     },

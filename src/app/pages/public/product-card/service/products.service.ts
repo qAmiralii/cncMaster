@@ -7,7 +7,7 @@ import { Product } from '../model/product.model';
 export class ProductsService {
 
   private products: Product[] = [
-        {
+    {
       id: 1,
       title: 'CNC Machine X200',
       price: 3200,
@@ -42,8 +42,11 @@ export class ProductsService {
   ];
 
   // what is this???????????????
-  getProducts(): Observable<Product[]>{
-        return of(this.products);
+  // getProducts(): Observable<Product[]>{
+  //       return of(this.products);
+  // }
+  getProducts(){
+    return (this.products);
   }
 
 }

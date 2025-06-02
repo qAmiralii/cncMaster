@@ -1,25 +1,23 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import { ProductsService } from '../../service/products.service';
 import { Product } from '../../model/product.model';
 import { ProductCardComponent } from "../../ui/product-card.component";
+import { MatCardModule } from '@angular/material/card';
+import { CommonModule } from '@angular/common';
+import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
   selector: 'app-product-list',
-  imports: [ProductCardComponent],
+  imports: [
+    ProductCardComponent,
+    MatCardModule,
+    CommonModule,
+    MatChipsModule
+  ],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.scss'
 })
 export class ProductListComponent {
-  products: Product[] = [];
-
-  productService = inject(ProductsService);
-  
-  ngOnInit(): void {
-    this.productService.getProducts().subscribe({
-      next: data => this.products = data,
-      error: err => console.error('Failed to load products', err)
-    });
-  }
-
+  @Input() product!: Product;
 
 }
