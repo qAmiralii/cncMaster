@@ -4,14 +4,17 @@
 
   .product-scroll {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    flex-wrap: nowrap;
+    justify-content: center;
+    // gap: 1rem;
+    flex-wrap: wrap;
   }
 }
-.test{
-  
+
+.test {
+  background-color: red;
+  margin: 100vh 0 0 0;
 }
+
 @media (min-width: 768px) {
   .product-list-container .product-scroll {
     flex-wrap: wrap;
