@@ -1,0 +1,19 @@
+<div class="product-list-wrapper">
+  <div class="product-scroll-container">
+    @for (item of product; track product.id) {
+      <mat-card class="product-card">
+        <img mat-card-image [src]="product.image" [alt]="product.title" />
+        <mat-card-title>{{ product.title }}</mat-card-title>
+        <mat-card-subtitle>{{ product.category }}</mat-card-subtitle>
+        <mat-card-content>
+          <p>{{ product.description }}</p>
+          <p class="price">Price: {{ product.price | currency }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button color="primary">Buy Now</button>
+          <button mat-button>Details</button>
+        </mat-card-actions>
+      </mat-card>
+    }
+  </div>
+</div>

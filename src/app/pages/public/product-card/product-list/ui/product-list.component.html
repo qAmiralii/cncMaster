@@ -1,0 +1,7 @@
+<div class="product-list-container">
+  <div class="product-scroll">
+    @for (product of products; track product.id) {
+      <app-product-card [product]="product" />
+    }
+  </div>
+</div>

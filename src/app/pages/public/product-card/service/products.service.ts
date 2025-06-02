@@ -12,6 +12,7 @@ export class ProductsService {
       title: 'CNC Machine X200',
       price: 3200,
       image: '/img/cncrouter/101.png',
+      category: 'cncrouter',
       description: 'High precision CNC machine.',
       rating: 4.5,
       tags: ['industrial']
@@ -21,6 +22,7 @@ export class ProductsService {
       title: 'CNC Router Pro',
       price: 1800,
       image: '/img/cncrouter/102.png',
+      category: 'cncrouter',
       description: 'Compact router for small-scale work.',
       rating: 4.2,
       tags: ['compact', 'affordable']
@@ -30,14 +32,18 @@ export class ProductsService {
       title: 'Laser CNC Cutter',
       price: 2500,
       image: '/img/wallPanel/wall101.png',
+      category: 'wallPanel',
       description: 'Laser precision for detailed cutting.',
       rating: 4.7,
       tags: ['laser', 'precision']
     }
 
 
+  ];
 
+  // what is this???????????????
+  getProducts(): Observable<Product[]>{
+        return of(this.products);
+  }
 
-
-  ]
 }
