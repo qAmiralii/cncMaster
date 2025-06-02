@@ -13,8 +13,13 @@ export class ProductListComponent {
   products: Product[] = [];
 
   productService = inject(ProductsService);
+  
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(data => this.products = data);
+    this.productService.getProducts().subscribe({
+      next: data => this.products = data,
+      error: err => console.error('Failed to load products', err)
+    });
   }
+
 
 }

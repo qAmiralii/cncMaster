@@ -1,7 +1,10 @@
 <div class="product-list-container">
   <div class="product-scroll">
-    @for (product of products; track product.id) {
-      <app-product-card [product]="product" />
+    @for (item of products; track $index) {
+      <app-product-card [product]="item" />
     }
+    <div class="test">
+      salam
+    </div>
   </div>
 </div>
