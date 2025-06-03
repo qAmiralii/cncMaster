@@ -5,8 +5,7 @@ import { Product } from '../model/product.model';
   providedIn: 'root'
 })
 export class ProductsService {
-
-  private products: Product[] = [
+  private pData: Product[] = [
     {
       id: 1,
       title: 'CNC Machine X200',
@@ -37,14 +36,8 @@ export class ProductsService {
       rating: 4.7,
       tags: ['laser', 'precision']
     }
-
-
   ];
-
-  // what is this???????????????
-  // getProducts(): Observable<Product[]>{
-  //       return of(this.products);
-  // }
+  
   getProducts(){
     return (this.products);
   }
