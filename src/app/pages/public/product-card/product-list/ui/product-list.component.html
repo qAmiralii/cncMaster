@@ -1,7 +1,9 @@
 <div class="product-list-wrapper">
   <div class="product-scroll-container">
     <mat-card class="product-card">
-      <img mat-card-image [src]="product.image" [alt]="product.title" />
+      <div class="image">
+        <img mat-card-image [src]="product.image" [alt]="product.title" />
+      </div>
       <mat-card-title>{{ product.title }}</mat-card-title>
       <mat-card-subtitle>{{ product.category }}</mat-card-subtitle>
       <mat-card-content>
