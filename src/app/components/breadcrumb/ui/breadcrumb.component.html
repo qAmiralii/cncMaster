@@ -1,11 +1,13 @@
-<mat-card class="breadcrumb-card" appearance="outlined">
-  <div class="breadcrumb-container">
-    <div class="breadcrumb-step" *ngFor="let step of path; let last = last">
-      <span class="breadcrumb-icon">{{ step.icon }}</span>
-      <span class="breadcrumb-label">{{ step.label }}</span>
-      <ng-container *ngIf="!last">
-        <span class="breadcrumb-arrow">➤</span>
-      </ng-container>
+<mat-card class="breadcrumb-card" appearance="outlined" [class.mobile]="isHandset$ | async">
+    <div class="breadcrumb-container">
+        @for (step of path; track $index; let last = $last) {
+        <div class="breadcrumb-step">
+            <mat-icon class="breadcrumb-icon">{{ step.icon }}</mat-icon>
+            <span class="breadcrumb-label">{{ step.label }}</span>
+            @if (!last) {
+            <mat-icon class="breadcrumb-arrow">chevron_right</mat-icon>
+            }
+        </div>
+        }
     </div>
-  </div>
 </mat-card>

@@ -5,6 +5,7 @@ import { Product } from '../model/product.model';
   providedIn: 'root'
 })
 export class ProductsService {
+  cat : string = 'all';
   private pData: Product[] = [
     {
       id: 1,
