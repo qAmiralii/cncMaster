@@ -37,9 +37,9 @@ export class ProductsService {
       tags: ['laser', 'precision']
     }
   ];
-  
-  getProducts(){
-    return (this.products);
+
+  list(){
+    return this.pData;
   }
 
 }

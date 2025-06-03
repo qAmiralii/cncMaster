@@ -19,8 +19,7 @@ import { ProductListComponent } from "../product-list/ui/product-list.component"
 })
 export class ProductCardComponent {
 
-  products: Product[] = [];
-
-  productService = inject(ProductsService).getProducts();
+  productService = inject(ProductsService);
+  dataSource = this.productService.list()
 
 }
