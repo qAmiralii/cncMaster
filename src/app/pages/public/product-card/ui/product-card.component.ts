@@ -23,10 +23,4 @@ export class ProductCardComponent {
 
   productService = inject(ProductsService).getProducts();
 
-  // ngOnInit(): void {
-  //   this.productService.getProducts().subscribe({
-  //     next: data => this.products = data,
-  //     error: err => console.error('Failed to load products', err)
-  //   });
-  // }
 }
