@@ -1,0 +1,11 @@
+<mat-card class="breadcrumb-card" appearance="outlined">
+  <div class="breadcrumb-container">
+    <div class="breadcrumb-step" *ngFor="let step of path; let last = last">
+      <span class="breadcrumb-icon">{{ step.icon }}</span>
+      <span class="breadcrumb-label">{{ step.label }}</span>
+      <ng-container *ngIf="!last">
+        <span class="breadcrumb-arrow">➤</span>
+      </ng-container>
+    </div>
+  </div>
+</mat-card>

@@ -35,11 +35,32 @@ export class ProductsService {
       description: 'Laser precision for detailed cutting.',
       rating: 4.7,
       tags: ['laser', 'precision']
+    },
+    {
+      id: 4,
+      title: 'Laser CNC Cutter',
+      price: 2500,
+      image: '/img/wallPanel/wall102.png',
+      category: 'wallPanel',
+      description: 'Laser precision for detailed cutting.',
+      rating: 4.7,
+      tags: ['laser', 'precision']
+    },
+    {
+      id: 5,
+      title: 'Laser CNC Cutter',
+      price: 2500,
+      image: '/img/wallPanel/wall103.png',
+      category: 'wallPanel',
+      description: 'Laser precision for detailed cutting.',
+      rating: 4.7,
+      tags: ['laser', 'precision']
     }
+
+
   ];
 
   list(){
     return this.pData;
   }
-
 }

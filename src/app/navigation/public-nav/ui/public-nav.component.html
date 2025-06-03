@@ -64,10 +64,11 @@
         </div>
         @if (showMobileMenu) {
         <div class="mobile-menu">
-            <button mat-button>Products</button>
-            <button mat-button>News</button>
-            <button mat-button>Support</button>
-            <button mat-button>About us</button>
+            <button routerLink="home" (click)="toggleMobileMenu()" mat-button>Home</button>
+            <button routerLink="products" (click)="toggleMobileMenu()" mat-button>Products</button>
+            <button (click)="toggleMobileMenu()" mat-button>News</button>
+            <button (click)="toggleMobileMenu()" mat-button>Support</button>
+            <button (click)="toggleMobileMenu()" mat-button>About us</button>
         </div>
         }
     </mat-card-content>
