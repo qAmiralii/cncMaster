@@ -8,18 +8,17 @@
         align-items: center;
         overflow-x: auto;
         gap: 0.5rem;
-        padding-bottom: 0.2rem;
 
         .breadcrumb-step {
             cursor: pointer;
             display: inline-flex;
             align-items: center;
-            white-space: nowrap;
+            // white-space: nowrap; ??????????????
 
             .breadcrumb-icon {
                 font-size: 18px;
                 color: #0077cc;
-                margin-inline-end: 4px;
+                margin-right: 4px;
             }
 
             .breadcrumb-label {
