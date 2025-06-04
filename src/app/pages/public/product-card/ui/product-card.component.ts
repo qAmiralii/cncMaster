@@ -1,12 +1,11 @@
 import { Component, inject, Input } from '@angular/core';
-import { Product } from '../model/product.model';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatChipsModule } from '@angular/material/chips';
 import { ProductsService } from '../service/products.service';
 import { ProductListComponent } from "../product-list/ui/product-list.component";
 import { BreadcrumbComponent } from "../../../../components/breadcrumb/ui/breadcrumb.component";
-
+import { MatButton } from '@angular/material/button';
 @Component({
   selector: 'app-product-card',
   imports: [
@@ -15,6 +14,7 @@ import { BreadcrumbComponent } from "../../../../components/breadcrumb/ui/breadc
     MatChipsModule,
     ProductListComponent,
     BreadcrumbComponent,
+    MatButton,
 ],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss'
