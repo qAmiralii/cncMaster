@@ -8,8 +8,28 @@
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: center;
+  background-color: rgb(255, 241, 223);
   overflow: auto;
-  #sp{
-    padding-left: 1rem;
+
+  button{
+    color: black;
+  }
+  mat-card-actions{
+    padding: 0;
+  }
+}
+@media (max-width: 1100px) {
+    #sp{
+    padding-left: 20rem;
+  }
+}
+@media (max-width: 745px) {
+    #sp{
+    padding-left: 35rem;
+  }
+}
+@media (max-width: 500px) {
+    #sp{
+    padding-left: 50rem;
   }
 }

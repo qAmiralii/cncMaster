@@ -6,6 +6,7 @@ import { ProductsService } from '../service/products.service';
 import { ProductListComponent } from "../product-list/ui/product-list.component";
 import { BreadcrumbComponent } from "../../../../components/breadcrumb/ui/breadcrumb.component";
 import { MatButton } from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
 @Component({
   selector: 'app-product-card',
   imports: [
@@ -15,6 +16,7 @@ import { MatButton } from '@angular/material/button';
     ProductListComponent,
     BreadcrumbComponent,
     MatButton,
+    MatIcon
 ],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss'
