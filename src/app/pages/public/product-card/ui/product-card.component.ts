@@ -14,7 +14,7 @@ import { BreadcrumbComponent } from "../../../../components/breadcrumb/ui/breadc
     CommonModule,
     MatChipsModule,
     ProductListComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
 ],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss'
