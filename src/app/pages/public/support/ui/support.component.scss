@@ -1,70 +1,82 @@
-/* support.component.scss */
 .support-container {
-  padding: 2rem;
-  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    padding: 2rem;
 
-  .hero-section {
-    text-align: center;
-    img {
-      max-width: 200px;
-      margin-bottom: 1rem;
-    }
-    h1 {
-      color: #0288d1;
-    }
-    p {
-      color: #555;
-    }
-  }
+    background: linear-gradient(105deg, rgb(255, 233, 154), #86e5ff, #FFAAAA);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    padding: 2rem;
+    color: #fff; // اگر متن تیره بود، سفید بهتره
 
-  .support-options {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    .hero-section {
+        text-align: center;
 
-    .support-card {
-      background: #ffffff;
-      border-radius: 1rem;
-      padding: 1rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      width: 250px;
-      transition: transform 0.3s;
+        img {
+            max-width: 25vw;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
 
-      &:hover {
-        transform: translateY(-5px);
-      }
+        h1 {
+            color: #0288d1;
+        }
 
-      img {
-        width: 60px;
-        margin-bottom: 0.5rem;
-      }
-
-      h3 {
-        color: #0288d1;
-      }
-
-      p {
-        font-size: 0.9rem;
-        color: #666;
-      }
-    }
-  }
-
-  .faq-section {
-    margin-top: 3rem;
-
-    h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-      color: #0277bd;
+        p {
+            color: #555;
+        }
     }
 
-    mat-expansion-panel {
-      margin-bottom: 1rem;
-      background: #f1f8ff;
+    .support-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 2rem;
+
+        .support-card {
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.354);
+
+            }
+
+            img {
+                width: 60px;
+                margin-bottom: 0.5rem;
+            }
+
+            h3 {
+                color: #000000;
+            }
+
+            p {
+                font-size: 0.9rem;
+                color: #666;
+            }
+        }
     }
-  }
+
+    .faq-section {
+        margin-top: 3rem;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #0277bd;
+        }
+
+        mat-expansion-panel {
+            margin-bottom: 1rem;
+            background: #f1f8ff;
+        }
+    }
 }

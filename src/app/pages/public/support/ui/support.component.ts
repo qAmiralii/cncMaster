@@ -17,17 +17,17 @@ export class SupportComponent {
     {
       title: 'پشتیبانی چت',
       description: 'با تیم پشتیبانی به‌صورت زنده گفتگو کنید.',
-      icon: 'assets/icons/chat-support.svg'
+      icon: '/img/support/chat_support.png'
     },
     {
       title: 'ارسال تیکت',
       description: 'تیکت خود را ثبت کرده و پیگیری کنید.',
-      icon: 'assets/icons/ticket-support.svg'
+      icon: '/img/support/ticket_support.png'
     },
     {
       title: 'تماس تلفنی',
       description: 'با شماره تماس ما در ارتباط باشید.',
-      icon: 'assets/icons/phone-support.svg'
+      icon: '/img/support/phone_support.png'
     }
   ];
 
