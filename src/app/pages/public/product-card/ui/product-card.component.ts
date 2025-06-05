@@ -7,6 +7,7 @@ import { ProductListComponent } from "../product-list/ui/product-list.component"
 import { BreadcrumbComponent } from "../../../../components/breadcrumb/ui/breadcrumb.component";
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
+import { Product } from '../model/product.model';
 @Component({
   selector: 'app-product-card',
   imports: [
@@ -17,13 +18,17 @@ import { MatIcon } from '@angular/material/icon';
     BreadcrumbComponent,
     MatButton,
     MatIcon
-],
+  ],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss'
 })
 export class ProductCardComponent {
-
+  goWall() {
+    this.productService.cat = "wallPanel"
+    this.data = this.dataSource.filter(x => x.category == this.productService.cat);
+  }
+  
   productService = inject(ProductsService);
-  dataSource = this.productService.list()
-
+  dataSource = this.productService.list();
+  data: Product[] = this.dataSource;
 }
