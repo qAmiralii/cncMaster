@@ -1,6 +1,6 @@
 <mat-card class="iconsMenu">
   <mat-card-actions id="sp">
-    <button matButton>
+    <button (click)="goCNC()" matButton>
       <mat-icon>factory</mat-icon>
       Architecture</button>
   </mat-card-actions>
@@ -63,6 +63,17 @@
 
 
 <app-breadcrumb />
+@if (productService.cat == "all") {
+<div class="product-list-container">
+  <div class="product-scroll">
+    @for (item of dataSource ; track $index) {
+    <app-product-list [product]="item" />
+    }
+  </div>
+</div>
+}
+@if (productService.cat !=="all") {
+
 <div class="product-list-container">
   <div class="product-scroll">
     @for (item of data ; track $index) {
@@ -70,3 +81,4 @@
     }
   </div>
 </div>
+}

@@ -23,11 +23,15 @@ import { Product } from '../model/product.model';
   styleUrl: './product-card.component.scss'
 })
 export class ProductCardComponent {
+  goCNC() {
+    this.productService.cat = "cncrouter"
+    this.data = this.dataSource.filter(x => x.category == this.productService.cat);
+  }
   goWall() {
     this.productService.cat = "wallPanel"
     this.data = this.dataSource.filter(x => x.category == this.productService.cat);
   }
-  
+
   productService = inject(ProductsService);
   dataSource = this.productService.list();
   data: Product[] = this.dataSource;

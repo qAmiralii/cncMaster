@@ -5,6 +5,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { map, Observable, shareReplay } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { AsyncPipe } from '@angular/common';
+import { ProductsService } from '../../../pages/public/product-card/service/products.service';
 
 
 @Component({
@@ -21,6 +22,10 @@ import { AsyncPipe } from '@angular/common';
   styleUrl: './public-nav.component.scss'
 })
 export class PublicNavComponent {
+  refreshService = inject(ProductsService)
+  refresh() {
+    this.refreshService.cat = "all"
+  }
 
   private breakpointObserver = inject(BreakpointObserver);
 
@@ -31,7 +36,6 @@ export class PublicNavComponent {
     );
 
   showMobileMenu = false;
-
   toggleMobileMenu() {
     this.showMobileMenu = !this.showMobileMenu;
   }
