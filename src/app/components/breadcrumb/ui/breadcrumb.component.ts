@@ -20,11 +20,11 @@ import { ProductsService } from '../../../pages/public/product-card/service/prod
   styleUrl: './breadcrumb.component.scss'
 })
 export class BreadcrumbComponent {
-  catRout = inject(ProductsService).cat;
+  catRout = inject(ProductsService);
   path = [
   { icon: 'home', label: 'Home' },
   { icon: 'category', label: 'Products' },
-  { icon: 'memory', label: this.catRout }
+  { icon: 'memory', label: this.catRout.cat }
 ];
 
 
