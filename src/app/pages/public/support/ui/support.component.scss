@@ -1,7 +1,7 @@
 .support-container {
     padding: 2rem;
 
-    background: linear-gradient(105deg, rgb(255, 233, 154), #86e5ff, #FFAAAA);
+    background: linear-gradient(105deg, rgba(255, 233, 154, 0.63), #86e5ffaf, #ffaaaabe );
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -13,7 +13,7 @@
         text-align: center;
 
         img {
-            max-width: 25vw;
+            max-width: 20vw;
             width: 100%;
             margin-bottom: 1rem;
         }
