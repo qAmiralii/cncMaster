@@ -1,0 +1,32 @@
+<div class="support-container">
+  <div class="hero-section">
+    <img src="assets/support-banner.svg" alt="Support Banner" />
+    <h1>چطور می‌تونیم کمکتون کنیم؟</h1>
+    <p>تیم پشتیبانی ما همیشه آماده پاسخگویی به سوالات شماست.</p>
+  </div>
+
+  <div class="support-options">
+    @for (item of supportItems; track item) {
+      <div class="support-card">
+        <img [src]="item.icon" alt="{{item.title}}" />
+        <h3>{{item.title}}</h3>
+        <p>{{item.description}}</p>
+        <button mat-button color="primary">ارتباط با ما</button>
+      </div>
+    }
+  </div>
+
+  <div class="faq-section">
+    <h2>سوالات پرتکرار</h2>
+    <mat-accordion>
+      @for (faq of faqs; track faq) {
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{faq.question}}</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>{{faq.answer}}</p>
+        </mat-expansion-panel>
+      }
+    </mat-accordion>
+  </div>
+</div>
