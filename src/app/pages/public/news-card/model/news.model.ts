@@ -5,3 +5,4 @@ export interface newsModel {
     date: string;
     category: string;
 }
+

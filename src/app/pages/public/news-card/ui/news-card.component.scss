@@ -66,3 +66,74 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   }
 }
+
+.badge {
+  background-color: #0097a7;
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+
+  .news-card {
+    width: 100%;
+    max-width: 800px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+      max-height: 220px;
+      object-fit: cover;
+    }
+
+    mat-card-content {
+      padding-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    mat-card-actions {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+// 📱 موبایل
+@media (max-width: 768px) {
+  .news-horizontal-card {
+    min-width: 200px;
+  }
+
+  .news-card img {
+    max-height: 150px;
+  }
+
+  .news-list {
+    padding: 0.5rem;
+  }
+}
+.middle-card{
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    .colomCard{
+        min-width: 15vw;
+        height: 100%;
+    }
+}

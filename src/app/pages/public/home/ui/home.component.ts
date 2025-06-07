@@ -5,7 +5,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { FooterComponent } from "../../../../components/footer/ui/footer.component";
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable, map, shareReplay } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
@@ -22,7 +21,6 @@ import { TesttComponent } from "../../testt/testt.component";
     MatCardModule,
     SliderComponent,
     MatSnackBarModule,
-    FooterComponent,
     AsyncPipe,
     TesttComponent
 ],

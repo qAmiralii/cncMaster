@@ -6,6 +6,7 @@ import { map, Observable, shareReplay } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { AsyncPipe } from '@angular/common';
 import { ProductsService } from '../../../pages/public/product-card/service/products.service';
+import { FooterComponent } from "../../../components/footer/ui/footer.component";
 
 
 @Component({
@@ -16,8 +17,8 @@ import { ProductsService } from '../../../pages/public/product-card/service/prod
     RouterLink,
     RouterOutlet,
     AsyncPipe,
-
-  ],
+    FooterComponent
+],
   templateUrl: './public-nav.component.html',
   styleUrl: './public-nav.component.scss'
 })
