@@ -2,7 +2,7 @@
   <div class="hero-section">
     <img src="/img/support/header.png" alt="Support Banner" />
     <h1>How can we help you?</h1>
-    <p>تیم پشتیبانی ما همیشه آماده پاسخگویی به سوالات شماست.</p>
+    <p>Our support team is always ready to answer your questions.</p>
   </div>
 
   <div class="support-options">
@@ -11,13 +11,13 @@
         <img [src]="item.icon" alt="{{item.title}}" />
         <h3>{{item.title}}</h3>
         <p>{{item.description}}</p>
-        <button mat-button color="primary">ارتباط با ما</button>
+        <button mat-button color="primary">Contact us</button>
       </div>
     }
   </div>
 
   <div class="faq-section">
-    <h2>سوالات پرتکرار</h2>
+    <h2>Frequently Asked Questions</h2>
     <mat-accordion>
       @for (faq of faqs; track faq) {
         <mat-expansion-panel>

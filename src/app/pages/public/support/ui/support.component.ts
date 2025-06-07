@@ -15,30 +15,30 @@ import { MatExpansionModule } from '@angular/material/expansion';
 export class SupportComponent {
   supportItems = [
     {
-      title: 'پشتیبانی چت',
-      description: 'با تیم پشتیبانی به‌صورت زنده گفتگو کنید.',
+      title: 'Chat support',
+      description: 'Chat live with the support team.',
       icon: '/img/support/chat_support.png'
     },
     {
-      title: 'ارسال تیکت',
-      description: 'تیکت خود را ثبت کرده و پیگیری کنید.',
+      title: 'Send ticket',
+      description: 'Register and track your ticket.',
       icon: '/img/support/ticket_support.png'
     },
     {
-      title: 'تماس تلفنی',
-      description: 'با شماره تماس ما در ارتباط باشید.',
+      title: 'Call',
+      description: 'Contact us at our contact number.',
       icon: '/img/support/phone_support.png'
     }
   ];
 
   faqs = [
     {
-      question: 'چطور می‌تونم تیکت ثبت کنم؟',
-      answer: 'از طریق بخش "ارسال تیکت" در همین صفحه، می‌تونید درخواست خودتون رو ثبت کنید.'
+      question: 'How can I register a ticket?',
+      answer: 'You can submit your request through the "Submit Ticket" section on this page.'
     },
     {
-      question: 'زمان پاسخ‌دهی چقدره؟',
-      answer: 'در اکثر موارد، پاسخ‌گویی در کمتر از ۲۴ ساعت انجام میشه.'
+      question: 'What is the response time?',
+      answer: 'In most cases, a response is received in less than 24 hours.'
     }
   ];
 }
