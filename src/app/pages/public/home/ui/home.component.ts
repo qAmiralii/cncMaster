@@ -5,7 +5,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { IshandedComponent } from "../../../../components/test/ui/ishanded/ishanded.component";
 import { FooterComponent } from "../../../../components/footer/ui/footer.component";
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable, map, shareReplay } from 'rxjs';
@@ -22,7 +21,6 @@ import { AsyncPipe } from '@angular/common';
     MatCardModule,
     SliderComponent,
     MatSnackBarModule,
-    IshandedComponent,
     FooterComponent,
     AsyncPipe
   ],
