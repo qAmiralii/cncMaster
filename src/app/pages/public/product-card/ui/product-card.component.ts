@@ -35,4 +35,5 @@ export class ProductCardComponent {
   productService = inject(ProductsService);
   dataSource = this.productService.list();
   data: Product[] = this.dataSource;
+  
 }

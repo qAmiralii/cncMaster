@@ -1,1 +1,44 @@
-<p>news-card works!</p>
+<mat-card class="news-section" appearance="outlined">
+    <div class="news-header">
+        <h2>Latest CNC News</h2>
+        <mat-card>
+            <nav class="news-tabs">
+                <button class="active">Latest</button>
+                <button>Popular</button>
+                <button>Trending</button>
+            </nav>
+        </mat-card>
+    </div>
+    <div class="head-container">
+        @for (item of data; track $index) {
+        <mat-card class="sub-head-container" appearance="outlined">
+            <img mat-card-image src="/backimg.png" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <mat-card-title>
+                    {{item.title}}
+                </mat-card-title>
+                <p>
+                    {{item.summary}}
+                </p>
+                <mat-card-subtitle>
+                    {{item.date}}
+                </mat-card-subtitle>
+            </mat-card-content>
+            <mat-card-footer>
+                <mat-card-actions>
+                    <button matButton>
+                        <mat-icon>thumb_up</mat-icon>
+                        LIKE
+                    </button>
+                    <button matButton>SHARE</button>
+                </mat-card-actions>
+            </mat-card-footer>
+            <div class="chip">
+                <mat-chip-set class="example-chip" cdkDropList cdkDropListOrientation="horizontal">
+                    <mat-chip>{{item.category}}</mat-chip>
+                </mat-chip-set>
+            </div>
+        </mat-card>
+        }
+    </div>
+</mat-card>
