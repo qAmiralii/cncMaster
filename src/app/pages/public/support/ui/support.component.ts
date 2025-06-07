@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { MatButton } from '@angular/material/button';
-import { MatCard } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 @Component({
   selector: 'app-support',
   imports: [
-    MatCard,
     MatButton,
     MatExpansionModule
   ],

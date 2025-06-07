@@ -1,0 +1,28 @@
+<!-- بخش اخبار جدید -->
+<mat-card class="headline-section" appearance="outlined">
+  <h2>Latest Headlines</h2>
+  <div class="headline-scroll">
+    @for (item of news; track $index) {
+      <mat-card class="headline-card">
+        <img [src]="item.image" alt="news image" />
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.summary }}</p>
+      </mat-card>
+    }
+  </div>
+</mat-card>
+
+<!-- سایر اخبار -->
+<div class="news-grid">
+  @for (item of news; track $index) {
+    <mat-card class="news-card" appearance="outlined">
+      <img [src]="item.image" alt="news" />
+      <div class="content">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.summary }}</p>
+        <small>{{ item.date }} - {{ item.category }}</small>
+        <button mat-button color="primary">Read More</button>
+      </div>
+    </mat-card>
+  }
+</div>

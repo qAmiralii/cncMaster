@@ -9,6 +9,7 @@ import { FooterComponent } from "../../../../components/footer/ui/footer.compone
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable, map, shareReplay } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
+import { TesttComponent } from "../../testt/testt.component";
 
 
 
@@ -22,8 +23,9 @@ import { AsyncPipe } from '@angular/common';
     SliderComponent,
     MatSnackBarModule,
     FooterComponent,
-    AsyncPipe
-  ],
+    AsyncPipe,
+    TesttComponent
+],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

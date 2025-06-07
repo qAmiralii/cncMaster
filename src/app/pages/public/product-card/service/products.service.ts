@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
 import { Product } from '../model/product.model';
 @Injectable({
   providedIn: 'root'
@@ -57,8 +56,6 @@ export class ProductsService {
       rating: 4.7,
       tags: ['laser', 'precision']
     }
-
-
   ];
 
   list(){

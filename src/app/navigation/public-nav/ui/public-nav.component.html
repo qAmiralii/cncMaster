@@ -43,7 +43,7 @@
                     <button (click)="refresh()" mat-button>Products</button>
                 </div>
                 <div class="buttons hide-on-mobile">
-                    <button mat-button>News</button>
+                    <button routerLink="news" mat-button>News</button>
                 </div>
                 <div routerLink="support" class="buttons hide-on-mobile">
                     <button mat-button>Support</button>
@@ -66,7 +66,7 @@
         <div class="mobile-menu">
             <button routerLink="home" (click)="toggleMobileMenu()" mat-button>Home</button>
             <button routerLink="products" (click)="toggleMobileMenu()" mat-button>Products</button>
-            <button (click)="toggleMobileMenu()" mat-button>News</button>
+            <button routerLink="news" (click)="toggleMobileMenu()" mat-button>News</button>
             <button (click)="toggleMobileMenu()" mat-button>Support</button>
             <button (click)="toggleMobileMenu()" mat-button>About us</button>
         </div>
