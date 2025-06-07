@@ -53,3 +53,16 @@
         color: gray;
     }
 }
+.news-card{
+    max-width: 30vw;
+}
+
+::ng-deep .news-card {
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+}
