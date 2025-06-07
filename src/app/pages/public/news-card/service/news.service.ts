@@ -28,6 +28,13 @@ export class NewsService {
       image: 'assets/news3.jpg',
       date: '2025-06-03',
       category: 'Education'
+    },
+    {
+      title: 'New CNC Maintenance',
+      summary: 'Keep your CNC running like the bigest new wood cnc machine',
+      image: 'assets/news2.jpg',
+      date: 'April 2025-06-02',
+      category: 'Maintenance'
     }
   ]
   getData() {

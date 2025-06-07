@@ -34,15 +34,16 @@
 }
 
 .head-container {
-    margin-top: 2rem;
+    max-width: 100%;
+    margin: 2rem 0;
+    padding: 0 0 0 12vw;
     display: flex;
     justify-content: center;
     gap: 2rem;
     overflow: auto;
     // padding-left: 10rem;   mobile
     .sub-head-container {
-        max-width: 28%;
-        min-width: 10rem;
+        min-width: 22vw;
         height: 60vh;
     }
     .chip{
