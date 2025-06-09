@@ -18,6 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../../../../shared/services/auth.service';
 
 
 @Component({
@@ -40,6 +41,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+  auth = inject(AuthService);
+  check() {
+    this.auth.check(this.Login.username,this.Login.password)
+  }
   Login: Login = {
     username: '',
     password: '',
@@ -54,7 +59,7 @@ export class LoginComponent {
   }
 
 
-  
+
   private breakpointObserver = inject(BreakpointObserver);
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)

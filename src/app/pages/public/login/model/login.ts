@@ -3,3 +3,9 @@ export interface Login {
     password: string;
     keepMe: boolean;
 }
+export interface user {
+    username: string;
+    password: string;
+    fullname: string;
+    enable: boolean;
+}
