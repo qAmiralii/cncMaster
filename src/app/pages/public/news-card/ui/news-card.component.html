@@ -46,14 +46,15 @@
         }
     </div>
 </mat-card>
-
-
+<div class="sticky">i am a test</div>
 <mat-card class="middle-card" appearance="outlined">
-    <section>
+    <div class="sticky">
         <mat-card class="colomCard">
-            s
-        </mat-card>
-    </section>
+            @for (item of data; track $index) {
+                <button mat-button>{{item.category}}</button>
+            }
+            </mat-card>
+        </div>
     <section class="news-list">
         @for (item of data; track $index) {
         <mat-card class="news-card">
