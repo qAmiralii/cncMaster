@@ -1,4 +1,3 @@
-/* news-section.component.scss */
 .news-section {
     max-width: 90vw;
     margin: 1rem auto;
@@ -114,7 +113,6 @@
   }
 }
 
-// 📱 موبایل
 @media (max-width: 768px) {
   .news-horizontal-card {
     min-width: 200px;
