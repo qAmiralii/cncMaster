@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Login } from '../model/login';
 import { map, Observable, shareReplay } from 'rxjs';
 
@@ -35,15 +35,25 @@ import { AuthService } from '../../../../shared/services/auth.service';
     MatCardModule,
     MatIconModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
+
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
   auth = inject(AuthService);
+  router = inject(Router);
   check() {
-    this.auth.check(this.Login.username,this.Login.password)
+    this.onLogin = true;
+    let result = this.auth.check(this.Login.username, this.Login.password);
+    result.subscribe(x => {
+      if (x == true) {
+        this.router.navigateByUrl('/private')
+      }
+
+    })
+    this.onLogin = false;
   }
   Login: Login = {
     username: '',
