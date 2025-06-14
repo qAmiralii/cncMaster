@@ -45,7 +45,7 @@ export class LoginComponent {
   auth = inject(AuthService);
   router = inject(Router);
   check() {
-    this.onLogin = true;
+    this.onLogin = false;
     let result = this.auth.check(this.Login.username, this.Login.password);
     result.subscribe(x => {
       if (x == true) {

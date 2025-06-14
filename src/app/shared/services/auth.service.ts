@@ -12,9 +12,9 @@ export class AuthService {
     { username: 'gust', password: 'gust', fullname: 'میهمان', enable: true },
     { username: 'user', password: 'user', fullname: 'کاربر', enable: true },
   ]
-  check(username: string, password: string) {
+  check(username: string, password : string) {
     let success = true;
-    let result = this.mockUser.filter(x => x.username == username && x.password)
+    let result = this.mockUser.filter(x => x.username == username && x.password == password)
     if (result.length == 0) {
       success = false;
     }
