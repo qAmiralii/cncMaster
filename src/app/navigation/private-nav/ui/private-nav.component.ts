@@ -7,6 +7,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
 
 @Component({
   selector: 'app-private-nav',
@@ -18,7 +19,8 @@ import { MatCardModule } from '@angular/material/card';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule
   ]
 })
 export class PrivateNavComponent {
@@ -44,4 +46,45 @@ export class PrivateNavComponent {
       ];
     })
   );
+
+
+
+
+
+
+
+
+
+
+ stats: { title: string; value: string | number }[] = [];
+  cncNews: { title: string }[] = [];
+
+  ngOnInit(): void {
+    this.loadMockData();
+  }
+
+  loadMockData(): void {
+    this.stats = [
+      { title: 'تعداد کاربران', value: 1200 },
+      { title: 'فروش امروز (BTC)', value: '₿0.24' },
+      { title: 'قالب‌های فعال', value: 87 },
+      { title: 'سفارشات اخیر', value: 14 },
+    ];
+
+    this.cncNews = [
+      { title: 'آپدیت جدید دستگاه CNC مدل Z3 منتشر شد' },
+      { title: 'روش‌های کاهش لرزش در CNC پیشرفته' },
+      { title: '5 نکته حرفه‌ای در استفاده از دستگاه‌های برش' },
+    ];
+  }
+
+
+
+
+
+
+
+
 }
+
+
