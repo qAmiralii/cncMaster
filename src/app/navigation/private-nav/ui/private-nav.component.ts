@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-private-nav',
@@ -20,7 +21,9 @@ import {MatListModule} from '@angular/material/list';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    RouterLink,
+    RouterOutlet,
   ]
 })
 export class PrivateNavComponent {

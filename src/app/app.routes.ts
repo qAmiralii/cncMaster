@@ -6,6 +6,7 @@ import { ProductCardComponent } from './pages/public/product-card/ui/product-car
 import { SupportComponent } from './pages/public/support/ui/support.component';
 import { NewsCardComponent } from './pages/public/news-card/ui/news-card.component';
 import { PrivateNavComponent } from './navigation/private-nav/ui/private-nav.component';
+import { AdminProductsComponent } from './pages/private/admin-products/ui/admin-products.component';
 
 export const routes: Routes = [
     {
@@ -19,6 +20,7 @@ export const routes: Routes = [
     },
     {
         path: 'private', component: PrivateNavComponent, children: [
+            { path: 'products', component: AdminProductsComponent, pathMatch: "prefix" }
         ]
     },
     { path: '', redirectTo: 'public', pathMatch: 'full' },
