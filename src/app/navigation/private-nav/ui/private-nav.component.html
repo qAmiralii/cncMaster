@@ -26,29 +26,9 @@
 </div>
 
 
-<a routerLink="/products">Go</a>
+<a routerLink="products">Go</a>
 
 
-
-<div class="dashboard-grid">
-  @for (stat of stats; track $index) {
-    <mat-card class="stat-card">
-      <mat-card-title>{{ stat.title }}</mat-card-title>
-      <mat-card-content>{{ stat.value }}</mat-card-content>
-    </mat-card>
-  }
-
-  <mat-card class="news-card">
-    <mat-card-title>اخبار CNC</mat-card-title>
-    <mat-list>
-      @for (news of cncNews; track $index) {
-        <mat-list-item>{{ news.title }}</mat-list-item>
-      } @empty {
-        <mat-list-item>هیچ خبری موجود نیست.</mat-list-item>
-      }
-    </mat-list>
-  </mat-card>
-</div>
 
 
 <router-outlet></router-outlet>

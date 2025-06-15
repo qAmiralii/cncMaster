@@ -24,19 +24,3 @@
 
 
 
-
-
-
-
-
-.dashboard-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 16px;
-  padding: 16px;
-}
-
-.stat-card, .news-card {
-  background-color: #f1f5f9;
-  color: #1f2937;
-}
