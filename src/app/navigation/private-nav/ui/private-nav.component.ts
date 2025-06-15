@@ -30,29 +30,14 @@ import { Observable } from 'rxjs';
 })
 export class PrivateNavComponent {
 
-  private mobileMode = inject(BreakpointObserver);
-  cards = this.mobileMode.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return [
-          { title: 'Admin Dasshboard', cols: 1, rows: 1 },
-          { title: 'Side menu', cols: 1, rows: 1 },
-          { title: '', cols: 1, rows: 1 },
-        ]
-      }
 
-      return [
+      s = [
         { title: 'Admin Dasshboard', cols: 4, rows: 2 },
         { title: 'side menu', cols: 3, rows: 8 },
         { title: '', cols: 1, rows: 8 },
       ]
-    })
-  )
-  test = [
-          { title: 'Admin Dasshboard', cols: 1, rows: 1 },
-          { title: 'Side menu', cols: 1, rows: 1 },
-          { title: '', cols: 1, rows: 1 },
-        ]
+
+
   private breakpointObserver = inject(BreakpointObserver);
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -60,6 +45,14 @@ export class PrivateNavComponent {
       map(result => result.matches),
       shareReplay()
     );
-
-
+    isvalid : boolean = false
+    isva = this.isHandset$.subscribe( x => {
+      if (x==true) {
+        this.isvalid = true
+      }
+      else{
+        this.isvalid = false
+      }
+    }
+    )
 }
