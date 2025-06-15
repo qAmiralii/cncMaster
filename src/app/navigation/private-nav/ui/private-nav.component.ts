@@ -10,6 +10,12 @@ import { MatCardModule } from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
+export interface Tile {
+  color: string;
+  cols: number;
+  rows: number;
+  text: string;
+}
 @Component({
   selector: 'app-private-nav',
   templateUrl: './private-nav.component.html',
@@ -51,35 +57,6 @@ export class PrivateNavComponent {
   );
 
 
-
-
-
-
-
-
-
-
- stats: { title: string; value: string | number }[] = [];
-  cncNews: { title: string }[] = [];
-
-  ngOnInit(): void {
-    this.loadMockData();
-  }
-
-  loadMockData(): void {
-    this.stats = [
-      { title: 'تعداد کاربران', value: 1200 },
-      { title: 'فروش امروز (BTC)', value: '₿0.24' },
-      { title: 'قالب‌های فعال', value: 87 },
-      { title: 'سفارشات اخیر', value: 14 },
-    ];
-
-    this.cncNews = [
-      { title: 'آپدیت جدید دستگاه CNC مدل Z3 منتشر شد' },
-      { title: 'روش‌های کاهش لرزش در CNC پیشرفته' },
-      { title: '5 نکته حرفه‌ای در استفاده از دستگاه‌های برش' },
-    ];
-  }
 
 
 
