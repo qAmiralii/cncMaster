@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
-import { map } from 'rxjs/operators';
+import { map, shareReplay } from 'rxjs/operators';
 import { AsyncPipe } from '@angular/common';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-private-nav',
@@ -28,7 +29,7 @@ import { Title } from '@angular/platform-browser';
   ]
 })
 export class PrivateNavComponent {
-  
+
   private mobileMode = inject(BreakpointObserver);
   cards = this.mobileMode.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
@@ -39,7 +40,7 @@ export class PrivateNavComponent {
           { title: '', cols: 1, rows: 1 },
         ]
       }
-      
+
       return [
         { title: 'Admin Dasshboard', cols: 4, rows: 2 },
         { title: 'side menu', cols: 3, rows: 8 },
@@ -47,7 +48,18 @@ export class PrivateNavComponent {
       ]
     })
   )
-  
-  
-  
+  test = [
+          { title: 'Admin Dasshboard', cols: 1, rows: 1 },
+          { title: 'Side menu', cols: 1, rows: 1 },
+          { title: '', cols: 1, rows: 1 },
+        ]
+  private breakpointObserver = inject(BreakpointObserver);
+
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
+
+
 }
