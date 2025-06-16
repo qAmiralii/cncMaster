@@ -1,48 +1,27 @@
-<section class="products-management">
-  <header class="pm-header">
-    <h1>مدیریت کالاها</h1>
-    <button class="btn-primary">افزودن محصول جدید</button>
+<section class="products-section">
+  <header class="products-header">
+    <h2>مدیریت کالاها</h2>
+    <button class="btn-add">
+      <i class="material-icons">add_circle</i>
+      افزودن محصول
+    </button>
   </header>
 
-  <div class="table-responsive">
-    <table class="products-table">
-      <thead>
-        <tr>
-          <th>نام محصول</th>
-          <th>قیمت (BTC)</th>
-          <th>وضعیت</th>
-          <th>عملیات</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>قالب فروشگاهی مدرن</td>
-          <td>₿0.02</td>
-          <td><span class="status active">فعال</span></td>
-          <td>
-            <button class="btn-secondary">ویرایش</button>
-            <button class="btn-danger">حذف</button>
-          </td>
-        </tr>
-        <tr>
-          <td>قالب وبلاگی کلاسیک</td>
-          <td>₿0.015</td>
-          <td><span class="status inactive">غیرفعال</span></td>
-          <td>
-            <button class="btn-secondary">ویرایش</button>
-            <button class="btn-danger">حذف</button>
-          </td>
-        </tr>
-        <tr>
-          <td>قالب شرکتی حرفه‌ای</td>
-          <td>₿0.03</td>
-          <td><span class="status active">فعال</span></td>
-          <td>
-            <button class="btn-secondary">ویرایش</button>
-            <button class="btn-danger">حذف</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="products-grid">
+    <!-- کارت محصول -->
+    @for (item of dataSource; track $index) {
+    <div class="product-card animate-in">
+      <div class="card-top">
+        <h3>{{item.title}}</h3>
+        <p class="price">{{item.price}}</p>
+      </div>
+      <p class="status" [class.active]='item.status' [class.inactive]='!item.status'>💠</p>
+      <div class="card-actions">
+        <button class="btn-icon edit"><i class="material-icons">edit</i></button>
+        <button class="btn-icon delete"><i class="material-icons">delete</i></button>
+        <button class="btn-icon view"><i class="material-icons">visibility</i></button>
+      </div>
+    </div>
+    }
   </div>
 </section>

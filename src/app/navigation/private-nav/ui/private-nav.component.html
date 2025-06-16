@@ -29,18 +29,17 @@
       </mat-card>
     </mat-grid-tile>
 
-    <mat-grid-tile [colspan]="!isvalid?3:1" [rowspan]="!isvalid?8:1">
+    <mat-grid-tile [colspan]="!isvalid?3:1" [rowspan]="!isvalid?10:10">
       <mat-card class="dashboard-card">
-        <mat-card-header>
-          Overview
-        </mat-card-header>
         <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
+          <div>
+            <router-outlet></router-outlet>
+          </div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
 
-    <mat-grid-tile [colspan]="!isvalid?1:1" [rowspan]="!isvalid?8:1" id="sp">
+    <mat-grid-tile [colspan]="!isvalid?1:1" [rowspan]="!isvalid?10:10" id="sp">
       <mat-card class="dashboard-card admin-card">
         <mat-card-header>
           <h3>Admin Dashboard</h3>
@@ -48,13 +47,13 @@
         <mat-card-content class="dashboard-card-content">
           <div class="sidebar">
             <ul>
-              <li><a  class="active"><i class="fas fa-home"></i>نمای کلی</a></li>
-              <li><a ><i class="fas fa-users"></i>مدیریت کاربران</a></li>
-              <li><a ><i class="fas fa-box"></i>مدیریت محصولات</a></li>
-              <li><a ><i class="fas fa-shopping-cart"></i>مدیریت سفارشات</a></li>
-              <li><a ><i class="fas fa-chart-line"></i>آمار و گزارشات</a></li>
-              <li><a ><i class="fas fa-cogs"></i>تنظیمات</a></li>
-              <li><a ><i class="fas fa-sign-out-alt"></i>خروج</a></li>
+              <li><a class="active"><i class="fas fa-home"></i>نمای کلی</a></li>
+              <li><a routerLink="members"><i class="fas fa-users"></i>مدیریت کاربران</a></li>
+              <li><a routerLink="products"><i class="fas fa-box"></i>مدیریت محصولات</a></li>
+              <li><a><i class="fas fa-shopping-cart"></i>مدیریت سفارشات</a></li>
+              <li><a><i class="fas fa-chart-line"></i>آمار و گزارشات</a></li>
+              <li><a><i class="fas fa-cogs"></i>تنظیمات</a></li>
+              <li><a><i class="fas fa-sign-out-alt"></i>خروج</a></li>
             </ul>
           </div>
         </mat-card-content>
@@ -63,12 +62,3 @@
 
   </mat-grid-list>
 </div>
-<router-outlet></router-outlet>
-
-
-
-
-
-
-
-

@@ -25,15 +25,15 @@ import { Product } from '../model/product.model';
 export class ProductCardComponent {
   goCNC() {
     this.productService.cat = "cncrouter"
-    this.data = this.dataSource.filter(x => x.category == this.productService.cat);
+    this.data = this.dataSource.filter(x => x.category == this.productService.cat && x.status == true);
   }
   goWall() {
     this.productService.cat = "wallPanel"
-    this.data = this.dataSource.filter(x => x.category == this.productService.cat);
+    this.data = this.dataSource.filter(x => x.category == this.productService.cat && x.status == true);
   }
 
   productService = inject(ProductsService);
-  dataSource = this.productService.list();
+  dataSource = this.productService.getlist();
   data: Product[] = this.dataSource;
   
 }

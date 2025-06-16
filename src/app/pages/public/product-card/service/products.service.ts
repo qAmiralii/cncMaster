@@ -14,7 +14,8 @@ export class ProductsService {
       category: 'cncrouter',
       description: 'High precision CNC machine.',
       rating: 4.5,
-      tags: ['industrial']
+      tags: ['industrial'],
+      status: true
     },
     {
       id: 2,
@@ -24,7 +25,9 @@ export class ProductsService {
       category: 'cncrouter',
       description: 'Compact router for small-scale work.',
       rating: 4.2,
-      tags: ['compact', 'affordable']
+      tags: ['compact', 'affordable'],
+      status: true
+
     },
     {
       id: 3,
@@ -34,7 +37,9 @@ export class ProductsService {
       category: 'wallPanel',
       description: 'Laser precision for detailed cutting.',
       rating: 4.7,
-      tags: ['laser', 'precision']
+      tags: ['laser', 'precision'],
+      status: true
+
     },
     {
       id: 4,
@@ -44,21 +49,24 @@ export class ProductsService {
       category: 'wallPanel',
       description: 'Laser precision for detailed cutting.',
       rating: 4.7,
-      tags: ['laser', 'precision']
+      tags: ['laser', 'precision'],
+      status: true
+
     },
     {
       id: 5,
-      title: 'Laser CNC Cutter',
+      title: 'Laser CNC Cutter sp',
       price: 2500,
       image: '/img/wallPanel/wall103.png',
       category: 'wallPanel',
       description: 'Laser precision for detailed cutting.',
       rating: 4.7,
-      tags: ['laser', 'precision']
+      tags: ['laser', 'precision'],
+      status: false
     }
   ];
 
-  list(){
+  getlist(){
     return this.pData;
   }
 }
