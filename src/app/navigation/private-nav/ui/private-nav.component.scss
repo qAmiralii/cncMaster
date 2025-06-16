@@ -25,14 +25,13 @@
 }
 
 .dashboard-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-bottom: 10px;
-
+  display: flex;
+  gap: 1vw;
+  justify-content: center;
   .card {
+    width: 20vw;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 0.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     text-align: center;
@@ -42,7 +41,6 @@
     color: #666;
     font-size: 18px;
     margin-top: 0;
-    margin-bottom: 10px;
   }
 
   .card p {
@@ -118,61 +116,3 @@
 
 
 
-
-
-
-/* استایل‌های بخش اصلی محتوا */
-.main-content {
-  flex-grow: 1;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-/* استایل‌های هدر */
-.header {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header h1 {
-  margin: 0;
-  color: #333;
-  font-size: 28px;
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.user-profile img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-left: 10px;
-  border: 2px solid #2196f3;
-}
-
-.user-profile span {
-  font-weight: bold;
-  color: #555;
-}
-
-
-
-/* استایل برای بخش نمودارها/جدول */
-.charts-tables {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  flex-grow: 1;
-}
