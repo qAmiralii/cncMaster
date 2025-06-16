@@ -8,9 +8,11 @@
   </header>
 
   <div class="products-grid">
-    <!-- کارت محصول -->
     @for (item of dataSource; track $index) {
     <div class="product-card animate-in">
+      <div class="image">
+        <img mat-card-image [src]="item.image">
+      </div>
       <div class="card-top">
         <h3>{{item.title}}</h3>
         <p class="price">{{item.price}}</p>

@@ -1,5 +1,4 @@
 import { Component, inject, Input, OnInit } from '@angular/core';
-import { ProductsService } from '../../service/products.service';
 import { Product } from '../../model/product.model';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
