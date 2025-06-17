@@ -1,26 +1,31 @@
 <form class="example-form">
     <mat-form-field class="example-full-width">
+        <mat-label>id:</mat-label>
+        <input [(ngModel)]="data.id" name="id" type="number" matInput>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
         <mat-label>Tite:</mat-label>
-        <input name="title" matInput>
+        <input [(ngModel)]="data.title" name="title" matInput>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>image:</mat-label>
+         <!-- type??????????????????????????? -->
+        <input [(ngModel)]="data.image" name="img" matInput>
     </mat-form-field>
     <mat-form-field class="example-full-width">
         <mat-label>Price:</mat-label>
-        <input name="title" matInput>
+        <input [(ngModel)]="data.price" name="price" type="number" matInput>
     </mat-form-field>
     <mat-form-field class="example-full-width">
         <mat-label>category:</mat-label>
-            <mat-select [(ngModel)]="selectedValue" name="categorys">
-                @for (item of categorys; track item) {
-                <mat-option [value]="item">{{item}}</mat-option>
-                }
-            </mat-select>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-        <mat-label>description:</mat-label>
-        <input name="title" matInput>
+        <mat-select [(ngModel)]="data.category" name="categorys">
+            @for (item of categorys; track item) {
+            <mat-option [value]="item">{{item}}</mat-option>
+            }
+        </mat-select>
     </mat-form-field>
 </form>
 <div style="text-align: left;">
-    <button matButton="elevated"> تایید </button>
-    <button matButton="elevated"> انصراف </button>
+    <button (click)="ok()" matButton="elevated"> تایید </button>
+    <button (click)="onCancel.emit()" matButton="elevated"> انصراف </button>
 </div>

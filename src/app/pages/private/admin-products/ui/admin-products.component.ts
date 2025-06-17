@@ -10,15 +10,32 @@ import { AdminProductComponent } from "./admin-product/admin-product.component";
   imports: [
     MatCardModule,
     AdminProductComponent
-],
+  ],
   templateUrl: './admin-products.component.html',
   styleUrl: './admin-products.component.scss'
 })
 export class AdminProductsComponent {
+  ok(y: Product) {
+    this.action = 'list'
+    this.Source.addProduct(y);
+    this.refresh();
+  }
+  refresh() {
+    this.dataSource = this.Source.getlist();
+  }
+  cancel() {
+    this.action = 'list'
+  }
+  create() {
+    this.action = 'create'
+  }
+  action = 'list';
   edit(product: Product) {
+    this.action = 'edit'
     console.log(product)
   }
   remove(product: Product) {
+    this.action = 'remove';
     console.log(product)
   }
   Source = inject(ProductsService)

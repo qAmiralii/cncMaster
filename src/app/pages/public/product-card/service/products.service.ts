@@ -78,4 +78,7 @@ export class ProductsService {
   getCategory(){
     return this.catData
   }
+  addProduct(x:Product){
+    this.pData.push(x)
+  }
 }

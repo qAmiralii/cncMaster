@@ -1,7 +1,8 @@
+@if (action=='list') {
 <section class="products-section">
   <header class="products-header">
     <h2>مدیریت کالاها</h2>
-    <button class="btn-add">
+    <button (click)="create()" class="btn-add">
       <i class="material-icons">add_circle</i>
       افزودن محصول
     </button>
@@ -20,11 +21,14 @@
       <p class="status" [class.active]='item.status' [class.inactive]='!item.status'>💠</p>
       <div class="card-actions">
         <button (click)="edit(item)" class="btn-icon edit"><i class="material-icons">edit</i></button>
-        <button class="btn-icon delete"><i class="material-icons">delete</i></button>
+        <button (click)="remove(item)" class="btn-icon delete"><i class="material-icons">delete</i></button>
         <button class="btn-icon view"><i class="material-icons">visibility</i></button>
       </div>
     </div>
     }
   </div>
 </section>
-<app-admin-product></app-admin-product>
+}
+@else {
+  <app-admin-product (OnCancel)="cancel()" (onOk)="ok($event)"></app-admin-product>
+}
