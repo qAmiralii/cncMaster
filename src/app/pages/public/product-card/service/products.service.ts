@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Product } from '../model/product.model';
+import { Product, ProductCategory } from '../model/product.model';
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
   cat : string = 'all';
+  private catData: ProductCategory[] = [
+    "cncrouter",
+    "laser",
+    "wallPanel",
+    "wood"
+  ]
   private pData: Product[] = [
     {
       id: 1,
@@ -68,5 +74,8 @@ export class ProductsService {
 
   getlist(){
     return this.pData;
+  }
+  getCategory(){
+    return this.catData
   }
 }

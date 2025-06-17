@@ -22,7 +22,8 @@ export const routes: Routes = [
     {
         path: 'private', component: PrivateNavComponent, children: [
             { path: 'products', component: AdminProductsComponent, pathMatch: "prefix" },
-            { path: 'members', component: MembersComponent, pathMatch: 'prefix' }
+            { path: 'members', component: MembersComponent, pathMatch: 'prefix' },
+            // { path: 'exit', , pathMatch: 'full' }
         ]
     },
     { path: '', redirectTo: 'public', pathMatch: 'full' },

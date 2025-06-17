@@ -3,9 +3,11 @@ export interface Product {
     title: string;
     price: number;
     image: string;
-    category: string;
+    category: ProductCategory;
     status?: boolean;
     description?: string;
     rating?: number;
     tags?: string[];
 }
+
+export type ProductCategory = 'cncrouter' | 'wallPanel' | 'wood' | 'laser';
